@@ -38,6 +38,9 @@ function Navbar() {
         <Link href="/" className="font-semibold hover:text-[#dddddd] transition-all">
           Home
         </Link>
+        <Link href="/announcements" className="font-semibold hover:text-[#dddddd] transition-all">
+          Announcements
+        </Link>
         <Link href="/events" className="font-semibold hover:text-[#dddddd] transition-all">
           Upcoming Events
         </Link>

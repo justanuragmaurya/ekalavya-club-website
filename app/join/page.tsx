@@ -46,7 +46,7 @@ function Join() {
 
   return (
     <div className="flex justify-center items-center min-h-screen m-2">
-      <div className="w-full max-w-lg p-8 space-y-6 bg-[#1a1a1a] rounded-lg shadow-xl">
+      <div className="w-full max-w-lg p-8 space-y-6 bg-[#1a1a1a] rounded-lg shadow-xl z-10">
         <h2 className="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531]">
           Join Eklavya
         </h2>
