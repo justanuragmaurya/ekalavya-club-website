@@ -1,12 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useToast } from "@/hooks/use-toast"
 
+import { bouncy } from 'ldrs'
+
+
 
 function Join() {
+
+  // Default values shown
   const [name, setName] = useState("");
   const [regNumber, setRegNumber] = useState("");
   const [phone, setPhone] = useState("");
@@ -15,26 +20,35 @@ function Join() {
   const [program, setProgram] = useState("");
   const [reason, setReason] = useState("");
 
+  const [loading, setLoading] = useState(false);
+
   const { toast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent) => {
+
     e.preventDefault();
-    const response = await axios.post("/api/join",{ name, regNumber, phone, email, year, program, reason })
-    response.status == 200?toast({
+    setLoading(true);
+    const response = await axios.post("/api/join", { name, regNumber, phone, email, year, program, reason })
+    response.status == 200 ? toast({
       title: "Done",
       description: "Data posted to server !",
-    }):toast({
-      variant:"destructive",
+    }) : toast({
+      variant: "destructive",
       title: "Failed",
       description: "Server issue or email already exists"
     });
+    setLoading(false);
   };
+
+  useEffect(() => {
+    bouncy.register()
+  }, [])
 
   return (
     <div className="flex justify-center items-center min-h-screen m-2">
       <div className="w-full max-w-lg p-8 space-y-6 bg-[#1a1a1a] rounded-lg shadow-xl">
         <h2 className="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531]">
-          Join Ekalavya
+          Join Eklavya
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -139,11 +153,12 @@ function Join() {
               required
             ></textarea>
           </div>
-          <Button
-            type="submit"
-            className="w-full bg-gradient-to-r from-[#e0cc92] to-[#8d6531] text-[#1a1a1a] hover:from-[#d6c28a] hover:to-[#7d5c2c]"
-          >
-            Submit Application
+          <Button type="submit" className="w-full bg-gradient-to-r from-[#e0cc92] to-[#8d6531] text-[#1a1a1a] hover:from-[#d6c28a] hover:to-[#7d5c2c]">
+            {loading?<l-bouncy
+              size="45"
+              speed="1.75"
+              color="white"
+            ></l-bouncy> :"Submit Application"}
           </Button>
         </form>
       </div>
