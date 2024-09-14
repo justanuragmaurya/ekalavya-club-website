@@ -3,11 +3,11 @@ import { Mail, Instagram } from 'lucide-react';
 import Link from "next/link";
 
 export default function Home() {
-  const events = [
-    { title: "Tech Workshop", date: "April 15, 2024", time: "2:00 PM - 4:00 PM" },
-    { title: "Hackathon", date: "May 1-3, 2024", time: "48-hour event" },
-    { title: "Guest Lecture", date: "May 20, 2024", time: "6:00 PM - 7:30 PM" },
-  ];
+  // const events = [
+  //   { title: "Tech Workshop", date: "April 15, 2024", time: "2:00 PM - 4:00 PM" },
+  //   { title: "Hackathon", date: "May 1-3, 2024", time: "48-hour event" },
+  //   { title: "Guest Lecture", date: "May 20, 2024", time: "6:00 PM - 7:30 PM" },
+  // ];
 
   const teamMembers = [
     { name: "First Name ", role: "President", image: "/avatar.jpg" },
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="max-w-lg mx-auto text-center">
             <div className="mb-6">
               <h3 className="text-xl font-semibold text-[#e0cc92] mb-2">Get in Touch</h3>
-              <p className="text-neutral-300">We'd love to hear from you! Reach out to us through email or follow us on Instagram.</p>
+              <p className="text-neutral-300">We&apos;d love to hear from you! Reach out to us through email or follow us on Instagram.</p>
             </div>
             <div className="flex justify-center items-center gap-5 m-5">
               <a href="mailto:ekalavya@example.com" className="flex items-center text-neutral-200 hover:text-[#e0cc92] transition-colors">
