@@ -5,11 +5,9 @@ import Navbar from "@/components/Navbar";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster"
-
+import { Analytics } from "@vercel/analytics/react"
 
 const mont  = Montserrat({ subsets: ["latin"] });
-
-
 
 export const metadata: Metadata = {
   title: "Eklavya",
@@ -38,6 +36,8 @@ export default function RootLayout({
           )}
         />
         <Toaster />
+        <Analytics />
+        <h2 className="text-white text-sm text-center opacity-50">*website made by <a href="https://anuragmaurya.me" target="_blank" rel="noopener noreferrer"> <span className="underline py-5 text-[#e0cc92]">ANURAG MAURYA</span></a></h2>
       </body>
     </html>
   );

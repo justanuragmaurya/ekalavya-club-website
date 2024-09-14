@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex justify-center items-center h-[calc(100vh-64px)]">
+      <div className="flex justify-center items-center h-[calc(100vh-64px)] bg-[#1a1208]">
         <div className="flex flex-col items-center justify-center text-neutral-200">
           <p className="sm:text-xl text-lg bg-clip-text text-transparent font-bold bg-gradient-to-b from-neutral-200 to-neutral-400 ">अंतः अस्ति प्रारंभ</p>
           <p className="text-4xl py-3 tracking-wide sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] mb-3">
@@ -31,8 +31,25 @@ export default function Home() {
           </Button></Link>
         </div>
       </div>
+      {/* about us */}
+      <section id="about" className="py-32 bg-[#150f00]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531]">
+            About Us
+          </h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-neutral-300 mb-6">
+              Eklavya is a dynamic student organization at our university, dedicated to empowering students in the field of technology and innovation. Our mission is to create a vibrant community where students can learn, grow, and collaborate on exciting projects.
+            </p>
+            <p className="text-neutral-300">
+              Through our workshops, hackathons, and networking events, we aim to bridge the gap between academic learning and real-world applications. Join us in our journey to explore cutting-edge technologies, develop new skills, and make lasting connections in the tech world.
+            </p>
+          </div>
+        </div>
+      </section>
+      
       {/* upcoming events */}
-      <section id="events" className="py-32 bg-[#150f00]">
+      <section id="events" className="py-32 bg-[#1a1208]">
         <div className="container mx-auto px-4 m-5">
           <h2 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531]">
             Upcoming Events
@@ -49,8 +66,9 @@ export default function Home() {
           <p className="text-[#e0cc92] text-center text-2xl py-16"> -- coming soon  -- </p>
         </div>
       </section>
+      
       {/* our team */}
-      <section id="team" className="py-32 bg-[#1a1208]">
+      <section id="team" className="py-32 bg-[#150f00]">
         <div className="container mx-auto px-4 m-5">
           <h2 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531]">
             Our Team
@@ -67,7 +85,7 @@ export default function Home() {
         </div>
       </section>
       {/* contact us */}
-      <section id="contact" className="py-16  bg-[#150f00]">
+      <section id="contact" className="py-16 bg-[#1a1208]">
         <div className="container mx-auto px-4 m-5">
           <h2 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531]">
             Contact Us
