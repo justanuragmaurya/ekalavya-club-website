@@ -1,16 +1,26 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react"; // Import icons
+import { Menu, X } from "lucide-react";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   return (
-    <div className="flex justify-between items-center px-4 sm:px-8 py-2 backdrop-blur-sm shadow-md sticky top-0 z-10 text-white">
-      <div className="flex items-center justify-center">
+    <div className="flex justify-between items-center px-4 sm:px-8 py-2 backdrop-blur-sm sticky top-0 z-10 text-white shadow-lg border-b-[1px] border-[#2a1704]">
+      <div className="">
+        <Link href="/" className="flex items-center justify-center">
         <img src="/favicon.png" alt="Logo" className="w-8 sm:w-10" />
-        <h2 className="bg-clip-text text-transparent bg-gradient-to-br from-[#e0cc92] to-[#8d6531]  text-lg sm:text-xl font-bold ml-2">Ekalavya</h2>
+        <h2 className="bg-clip-text text-transparent bg-gradient-to-br from-[#e0cc92] to-[#8d6531] text-lg sm:text-xl font-bold ml-2">Eklavya</h2>
+        </Link>
       </div>
       <div className="lg:hidden">
         <button
@@ -28,13 +38,13 @@ function Navbar() {
         <Link href="/" className="font-semibold hover:text-[#dddddd] transition-all">
           Home
         </Link>
-        <Link href="/post" className="font-semibold hover:text-[#dddddd] transition-all">
+        <Link href="/events" className="font-semibold hover:text-[#dddddd] transition-all">
           Upcoming Events
         </Link>
-        <Link href="/assignments" className="font-semibold hover:text-[#dddddd] transition-all">
+        <Link href="/gallery" className="font-semibold hover:text-[#dddddd] transition-all">
           Gallery
         </Link>
-        <Link href="/auth">
+        <Link href="/join">
           <Button className="w-full lg:w-auto bg-neutral-200 hover:bg-neutral-400 text-[#1a1a1a]">
             Join Us !
           </Button>

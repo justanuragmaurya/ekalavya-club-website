@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster"
 
 
 const mont  = Montserrat({ subsets: ["latin"] });
@@ -34,9 +35,10 @@ export default function RootLayout({
           y={-1}
           strokeDasharray={"4 2 "}
           className={cn(
-            "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] opacity-50 -z-10",
+            "[mask-image:radial-gradient(450px_circle_at_center,white,transparent)] opacity-50 -z-10",
           )}
         />
+        <Toaster />
       </body>
     </html>
   );
