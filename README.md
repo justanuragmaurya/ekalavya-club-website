@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eklavya
 
-## Getting Started
+Eklavya is a web application designed for managing and tracking student registrations and information.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- User registration form for students
+- Data collection including name, registration number, phone, email, year, program, and reason for joining
+- Responsive design for various screen sizes
+- Animated UI elements for enhanced user experience
+- Form validation to ensure data integrity
+- Database integration for storing student information
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:**
+  - Next.js 14.2.11
+  - React
+  - TypeScript
+  - Tailwind CSS for styling
+  - Shadcn UI components for consistent design
+  - Framer Motion for animations
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Backend:**
+  - Next.js API routes
+  - Prisma ORM for database operations
+  - PostgreSQL database for data storage
 
-## Learn More
+- **DevOps:**
+  - Vercel for deployment and hosting
+  - Vercel Analytics for performance monitoring
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- \`app/\`: Next.js app directory containing pages and API routes
+- \`components/\`: Reusable React components
+- \`lib/\`: Utility functions and shared code
+- \`prisma/\`: Prisma schema and database migrations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Database Schema
 
-## Deploy on Vercel
+The main database model is the User, which includes:
+- name
+- registration number
+- phone
+- email
+- year
+- program
+- reason for joining
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Key Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Registration form with input validation
+- Responsive layout adapting to different screen sizes
+- Animated UI elements for improved user engagement
+- Server-side data processing and storage
+
+## Future Enhancements
+
+- Admin dashboard for managing student data
+- Analytics and reporting features
+- Integration with other school systems
+- Email notifications for successful registrations
+
+## Contributing
+
+Contributions to Eklavya are welcome. Please ensure to follow the project's coding standards and submit pull requests for any new features or bug fixes.
+
+## License
+
+[MIT License](LICENSE)
