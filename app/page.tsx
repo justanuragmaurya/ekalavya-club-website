@@ -12,7 +12,8 @@ export default function Home() {
   const teamMembers = [
     { name: "First Name ", role: "President", image: "/avatar.jpg" },
     { name: "Second Name", role: "Vice President", image: "/avatar.jpg" },
-    { name: "Third Name", role: "Technical Lead", image: "/avatar.jpg" },
+    { name: "Third Name", role: "Financial head ", image: "/avatar.jpg" },
+    { name: "Fourth Name", role: "Technical Lead", image: "/avatar.jpg" },
   ];
 
   return (
@@ -20,7 +21,7 @@ export default function Home() {
       <div className="flex justify-center items-center h-[calc(100vh-64px)] bg-[#1a1208]">
         <div className="flex flex-col items-center justify-center text-neutral-200">
           <p className="sm:text-xl text-lg bg-clip-text text-transparent font-bold bg-gradient-to-b from-neutral-200 to-neutral-400 ">अंतः अस्ति प्रारंभ</p>
-          <p className="text-4xl py-3 tracking-wide sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] mb-3">
+          <p className="text-4xl py-3 tracking-wide sm:text-7xl font-bold relative bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] mb-3">
             Eklavya
           </p>
           <p className="text-neutral-200 text-center max-w-2xl mx-auto opacity-70">
@@ -73,7 +74,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531]">
             Our Team
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="text-center">
                 <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4" />

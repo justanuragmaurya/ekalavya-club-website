@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useToast } from "@/hooks/use-toast"
-
+import Link from "next/link";
 import { bouncy } from 'ldrs'
 
 
@@ -21,32 +21,50 @@ function Join() {
   const [reason, setReason] = useState("");
 
   const [loading, setLoading] = useState(false);
+  const [formSumbited, setSubmited] = useState(false)
 
   const { toast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent) => {
-
     e.preventDefault();
     setLoading(true);
     const response = await axios.post("/api/join", { name, regNumber, phone, email, year, program, reason })
-    response.status == 200 ? toast({
-      title: "Done",
-      description: "Data posted to server !",
-    }) : toast({
-      variant: "destructive",
-      title: "Failed",
-      description: "Server issue or email already exists"
-    });
+    if (response.status === 200) {
+      toast({
+        title: "Done",
+        description: "Data posted to server!",
+      });
+      setSubmited(true);
+    } else {
+      toast({
+        variant: "destructive",
+        title: "Failed",
+        description: "Server issue or email already exists"
+      });
+    }
     setLoading(false);
   };
 
   useEffect(() => {
+    setSubmited(false);
     bouncy.register()
   }, [])
 
-  return (
-    <div className="flex justify-center items-center min-h-screen m-2">
-      <div className="w-full max-w-lg p-8 space-y-6 bg-[#1a1a1a] rounded-lg shadow-xl z-10">
+  return ( formSumbited ? <div className="flex justify-center my-56"> 
+  <div className="flex flex-col items-center justify-center bg-[#1a1a1a] p-10 gap-5 rounded-lg">
+    <p className="text-center text-2xl text-[#e0cc92]">Thank You</p> 
+    <p className=" text-md text-[#e0cc92] ">Form submitted succesfully</p>
+    <p className="text-center text-xs text-[#e0cc92]">We will get back to you soon</p>
+    <Link href="/">
+      <Button className="bg-gradient-to-r from-[#e0cc92] to-[#8d6531] text-[#1a1a1a] hover:from-[#d6c28a] hover:to-[#7d5c2c]">
+        Go to Home
+      </Button>
+    </Link>
+    </div>
+  </div> 
+    : 
+  <div className="flex justify-center items-center min-h-screen m-2">
+      <div className="w-full max-w-lg p-8 space-y-6 bg-[#1a1a1a] rounded-lg shadow-xl">
         <h2 className="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531]">
           Join Eklavya
         </h2>

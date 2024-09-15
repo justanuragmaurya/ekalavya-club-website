@@ -22,7 +22,7 @@ function Announcements() {
   return (
     <div className="relative min-h-screen bg-[#1a1208] text-neutral-200">
       <div className="absolute inset-0 bg-[#1a1208]"></div>
-      <div className="relative z-10 container mx-auto px-4 py-16">
+      <div className="relative container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531]">
           Announcements
         </h1>
