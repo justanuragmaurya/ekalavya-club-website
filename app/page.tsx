@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Instagram } from 'lucide-react';
 import Link from "next/link";
+import BlurFade from "@/components/magicui/blur-fade";
 
 export default function Home() {
   // const events = [
@@ -18,18 +19,22 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex justify-center items-center h-[calc(100vh-64px)] bg-[#1a1208]">
+      <div className="flex justify-center items-center h-[calc(100vh-64px)] bg-gradient-to-tl from-[#1a1208] to-[#361f00]">
         <div className="flex flex-col items-center justify-center text-neutral-200">
-          <p className="sm:text-xl text-lg bg-clip-text text-transparent font-bold bg-gradient-to-b from-neutral-200 to-neutral-400 ">अंतः अस्ति प्रारंभ</p>
-          <p className="text-4xl py-3 tracking-wide sm:text-7xl font-bold relative bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] mb-3">
+        <BlurFade delay={0.25} inView className="flex flex-col items-center justify-center">
+          <p className="text-4xl pt-3 tracking-wide sm:text-7xl font-bold relative bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] mb-3">
             Eklavya
           </p>
-          <p className="text-neutral-200 text-center max-w-2xl mx-auto opacity-70">
+          <p className="sm:text-xl text-lg bg-clip-text text-transparent font-bold bg-gradient-to-b from-neutral-200 to-neutral-400 ">अंतः अस्ति प्रारंभ</p>
+          </BlurFade>
+          <BlurFade delay={0.50} inView className="flex flex-col items-center justify-center">
+          <p className="text-neutral-200 text-center max-w-2xl mx-auto opacity-70 mt-5">
             Eklavya is a student organization dedicated to fostering learning, innovation, and collaboration. We organize workshops, hackathons, and networking events to help students grow their skills and connect with industry professionals.
           </p>
           <Link href="/join"><Button className="bg-[#e0cc92] text-black hover:bg-transparent hover:text-[#e0cc92] border border-[#e0cc92] mt-5">
             Join Us
           </Button></Link>
+          </BlurFade>
         </div>
       </div>
       {/* about us */}
@@ -97,7 +102,7 @@ export default function Home() {
               <p className="text-neutral-300">We&apos;d love to hear from you! Reach out to us through email or follow us on Instagram.</p>
             </div>
             <div className="flex justify-center items-center gap-5 m-5">
-              <a href="mailto:ekalavya@example.com" className="flex items-center text-neutral-200 hover:text-[#e0cc92] transition-colors">
+              <a href="mailto:eklavya.lpu@gmail.com" className="flex items-center text-neutral-200 hover:text-[#e0cc92] transition-colors">
                 <Mail className="mr-2" size={20} />
                 Mail Us
               </a>
@@ -105,10 +110,10 @@ export default function Home() {
                 <Instagram className="mr-2" size={20} />
                 @eklavya_lpu
               </a>
-              <a href="whatsapp" className=" flex gap-1 text-white text-md items-center">
+              {/* <a href="whatsapp" className=" flex gap-1 text-white text-md items-center">
                 <Whatsapp />
                 Join Our Group
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

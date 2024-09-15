@@ -78,6 +78,10 @@ function Page() {
           <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-[#e0cc92]"></div>
         </div>
       ) : isAuthenticated && (
+        <>
+        <div>
+          <h2 className='font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#e0cc92] to-[#8d6531] my-5 text-3xl'>Total Applicants : {data.length}</h2>{}
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {data.map((user, index) => (
             <div key={user.id} className="bg-[#1a1208] p-4 rounded-lg shadow-xl border-[0.5px] border-[#3a2d00]">
@@ -108,6 +112,7 @@ function Page() {
             </div>
           ))}
         </div>
+        </>
       )}
     </div>
   )

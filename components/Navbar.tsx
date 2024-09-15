@@ -9,7 +9,6 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
@@ -35,20 +34,20 @@ function Navbar() {
           isMenuOpen ? "flex" : "hidden"
         } lg:flex flex-col lg:flex-row lg:items-center absolute lg:static left-0 top-full w-full lg:w-auto bg-black lg:bg-transparent py-4 lg:py-0 px-4 lg:px-0 gap-4 lg:gap-5`}
       >
-        <Link href="/" className="font-semibold hover:text-[#dddddd] transition-all">
+        <Link href="/" className="font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] hover:scale-105 transition-all">
           Home
         </Link>
-        <Link href="/announcements" className="font-semibold hover:text-[#dddddd] transition-all">
+        <Link href="/announcements" className="font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] hover:scale-105 transition-all">
           Announcements
         </Link>
-        <Link href="/events" className="font-semibold hover:text-[#dddddd] transition-all">
+        <Link href="/events" className="font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] hover:scale-105 transition-all">
           Upcoming Events
         </Link>
-        <Link href="/gallery" className="font-semibold hover:text-[#dddddd] transition-all">
+        <Link href="/gallery" className="font-semibold bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] hover:scale-105 transition-all">
           Gallery
         </Link>
         <Link href="/join">
-          <Button className="w-full lg:w-auto bg-neutral-200 hover:bg-neutral-400 text-[#1a1a1a]">
+          <Button className="w-full lg:w-auto bg-neutral-200 hover:bg-neutral-300 hover:scale-105 transition-all  text-[#1a1a1a]">
             Join Us !
           </Button>
         </Link>
