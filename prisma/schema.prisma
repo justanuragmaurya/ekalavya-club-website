@@ -22,5 +22,6 @@ model User {
   year      Int
   program   String
   reason    String
+  isMember  Boolean @default(false)
 }
 

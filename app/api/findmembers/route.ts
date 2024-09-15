@@ -8,7 +8,7 @@ export async function GET() {
     console.log(_)
     const data = await client.user.findMany({
         where: {
-            isMember: false
+            isMember: true
         }
     });
     

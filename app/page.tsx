@@ -28,7 +28,7 @@ export default function Home() {
           <p className="sm:text-xl text-lg bg-clip-text text-transparent font-bold bg-gradient-to-b from-neutral-200 to-neutral-400 ">अंतः अस्ति प्रारंभ</p>
           </BlurFade>
           <BlurFade delay={0.50} inView className="flex flex-col items-center justify-center">
-          <p className="text-neutral-200 text-center max-w-2xl mx-auto opacity-70 mt-5">
+          <p className="text-neutral-200 text-center max-w-2xl mx-auto opacity-70 mt-5 px-8">
             Eklavya is a student organization dedicated to fostering learning, innovation, and collaboration. We organize workshops, hackathons, and networking events to help students grow their skills and connect with industry professionals.
           </p>
           <Link href="/join"><Button className="bg-[#e0cc92] text-black hover:bg-transparent hover:text-[#e0cc92] border border-[#e0cc92] mt-5">
