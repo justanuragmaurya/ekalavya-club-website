@@ -22,7 +22,7 @@ export default function Home() {
       <div className="flex justify-center items-center h-[calc(100vh-64px)] bg-gradient-to-tl from-[#1a1208] to-[#361f00]">
         <div className="flex flex-col items-center justify-center text-neutral-200">
         <BlurFade delay={0.25} inView className="flex flex-col items-center justify-center">
-          <p className="text-4xl pt-3 tracking-wide sm:text-7xl font-bold relative bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] mb-3">
+          <p className="text-4xl pb-1 tracking-wide sm:text-7xl font-bold relative bg-clip-text text-transparent bg-gradient-to-b from-[#e0cc92] to-[#8d6531] mb-3">
             Eklavya
           </p>
           <p className="sm:text-xl text-lg bg-clip-text text-transparent font-bold bg-gradient-to-b from-neutral-200 to-neutral-400 ">अंतः अस्ति प्रारंभ</p>
